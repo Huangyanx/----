@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>同步动画操作</title>
+    <style type="text/css">
+        .ball{width: 20px;height: 20px;border-radius: 20px;}
+        .div{width: 20px;height: 20px;border-radius: 20px;position: relative;right: 30px;}
+        .ball1{background-color: red;position: absolute}
+        .ball2{background-color: yellow; position: relative}
+        .ball3{background-color: blue;position: absolute}
+    </style>
+</head>
+<body>
+
+<div class="ball ball1" style="left:0;"><div class="se1 ball ball3" style="left:30px"></div></div>
+<div class="ball ball5" style="left:0;"><div class="se2 ball ball1" style="left:30px"></div></div>
+<div class="ball ball4" style="left:0;"><div class="se3 ball ball2" style="left:30px"></div></div>
+<div class="ball ball2" style="left:0;"><div class="se3 ball ball3" style="left:30px"></div></div>
+<div class="ball ball3" style="left:0;"><div class="se3 ball ball1" style="left:30px"></div></div>
+<div class="div ball1" ><div class="qq1 div ball3" style="left:30px"></div></div>
+<div class="div ball5" ><div class="qq2 div ball1" style="left:30px"></div></div>
+<div class="div ball4"><div class="qq3 div ball2" style="left:30px"></div></div>
+<div class="div ball2" ><div class="qq3 div ball3" style="left:30px"></div></div>
+<div class="div ball3"><div class="qq3 div ball1" style="left:30px"></div></div>
+<script>
+    var ball1=document.querySelector('.ball1');
+    var se1=document.querySelector('.se1');
+    var se2=document.querySelector('.se2');
+    var se3=document.querySelector('.se3');
+    var ball2=document.querySelector('.ball2');
+    var ball3=document.querySelector('.ball3');
+    var ball=document.querySelectorAll('.ball');
+    function animat(ball,distence) {
+        //缓冲运动
+     return new  Promise(function(resolve, reject) {
+         var speed=ball.offsetLeft;
+            setInterval(function () {
+                if (ball.offsetLeft>=distence){
+                    resolve();
+                }else {
+                    speed=Math.ceil((distence-ball.offsetLeft)/200);
+                    ball.style.left=ball.offsetLeft+speed+"px";
+                    console.log(ball.offsetLeft);
+                    console.log(speed);
+                }
+            },200);
+        })
+    }
+    function yunsu(ball,distence) {
+        //匀速运动
+            var speed=ball.offsetLeft;
+            setInterval(function () {
+                    ball.style.left=speed+"px";
+                speed+=10;
+                if (speed>=distence){speed=-distence;}
+            },1000);
+    }
+    for (var i=0;i<ball.length;i++){
+        yunsu(ball[i],1000);
+    }
+    animat(se1,40)
+            .then(function () {
+               return animat(se2,100)
+            })
+            .then(function () {
+                return animat(se3,120)
+            });
+  /* animat(ball1,300)
+            .then(function () {
+               return animat(ball2,500);
+            })
+            .then(function () {
+                 return animat(ball3,800);
+            })
+            .then(function () {
+                return animat(ball1,0);
+            })
+            .then(function () {
+                return animat(ball2,0);
+            })
+            .then(function () {
+                return animat(ball3,0);
+            });
+    animat(se,200);
+*/
+</script>
+
+</body>
+</html>

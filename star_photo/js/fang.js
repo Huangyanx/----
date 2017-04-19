@@ -9,21 +9,20 @@ window.onload=function () {
     btn.onclick=function () {
         //显示更多信息的框显示
         if (left_s==1){
-            skew.style.transform="skew(0deg, 0deg)";
-            right.style.right='0vw';
-            left_s=0;
+             show_more(0,0,0);
         }else {
-            skew.style.transform="skew(-25deg, 0deg)";
-            right.style.right='-50vw';
-            left_s=1;
+             show_more(-25,-50,1);
         }
     }
     var close=document.querySelector('.img_box img');
     close.onclick=function(){
-        skew.style.transform="skew(-25deg, 0deg)";
-        right.style.right='-50vw';
-        left_s=1;
+       show_more(-25,-50,1);
     }
+	function show_more(jiao,wid,is_l){
+		 skew.style.transform="skew("+jiao+"deg, 0deg)";
+        right.style.right=wid+'vw';
+        left_s=is_l;
+	}
     var noti_btn=document.querySelector('.box_btn .noti_btn');
     var get_noti=document.querySelector('.get_noti');
 	var noti_shadow= document.querySelector('.noti_shadow');

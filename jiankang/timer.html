@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="点击开始" onclick="jishi()"/>
+		<div id="content"></div>
+		<input type="button" value="点击停止" onclick="stop()" />
+		<script>
+			var timer=0;
+			function jishi(){
+				var time=2000;
+				timer=setInterval(function(){
+					time=time-50;
+					if(time<0)time=2000;
+					document.getElementById('content').innerHTML=time+"毫秒";
+				},time);
+			}
+			function stop(){
+				clearInterval(timer);
+			}
+			var a;//未赋值为未定义
+
+			alert(a); 
+		</script>
+		
+	</body>
+</html>

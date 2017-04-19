@@ -1,0 +1,361 @@
+ul li{
+    list-style: none;
+}
+/*头部*/
+header{
+   box-shadow: 1px 5px 2px #ccc;
+    margin-bottom: 20px;
+
+}
+
+header .tip_banner{
+    height: 40px;
+    line-height: 40px;
+    background-color: #333333;
+    color:#999 ;
+}
+header .tip_banner a{
+    color: #ACB7BC;
+}
+
+header .header-main{
+    padding: 15px 0;
+}
+header .header-main .logo_box{
+    height: 70px;
+    line-height: 50px;
+}
+header .header-main .list{
+    width: 50px;
+    height: 60px;
+    background-color: #B3B3B3;
+    color: #fff;
+    line-height: 60px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+header .header-main ul>li{
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+ .second_menu{
+    padding-left:20px;
+}
+header .header-main ul>li>a{
+    font-size: 12px;
+    color: #828282;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: "Hind", sans-serif;
+    -webkit-transition: all 350ms ease-out;
+    transition: all 350ms ease-out;
+}
+header .header-main ul>li>a span{
+    /*padding-left: 5px;*/
+    font-size: 13px;
+}
+
+header .header-main ul>li>a:hover{
+    color: #F8694D;
+}
+
+header .header-main .header-cart{
+    background-color:#F8694D ;
+    color: #fff;
+    line-height: 36px;
+}
+header .header-main .header-cart>span>span{
+    padding-left: 15px;
+}
+
+/*分享栏*/
+.share{
+    width: 100px;
+    position: fixed;
+    top: 80px;
+    right: 0px;
+}
+.share>ul>li{
+    list-style: none;
+    width: 80px;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    float: right;
+    clear: both;
+    cursor: pointer;
+}
+.share>ul>li:hover{
+    width: 100px;
+}
+.share .weibo_box{
+    background-color: #1DA1F2;
+    color: #fff;
+}
+.share .face_box{
+    background-color: #3B5998;
+    color: #fff;
+}
+.share .weixin_box{
+    background-color: #F8694D;
+    color: #fff;
+
+}
+.search_box input{
+    border-radius: 0px;
+}
+.search_box .p , .right .right_bottom .p{
+    padding-left:0px;
+    padding-right:0px;
+
+}
+.search_box .se{
+    background-color: #F8694D;
+    color: #fff;
+}
+
+
+/*首页第一屏*/
+.first-layer{
+    margin-bottom: 20px;
+}
+.first-layer .menu_box{
+    background-color: #F8694D;
+    color: #fff;
+    padding: 15px 0 15px 25px;
+    text-align: left;
+}
+.first-layer .cont-list{
+    background-color: #333333;
+    color: #999999;
+    text-align: left;
+}
+
+.first-layer  ul.cont-list>li{
+    padding: 20px 13px 20px 20px;
+    border-bottom: 1px solid #444;
+    margin-left: -40px;
+}
+.first-layer .cont-list li:last-child{
+    border-bottom: 0px;
+}
+.first-layer .cont-list li a{
+    color: #999999;
+}
+.first-layer .cont-list li a .second_menu{
+    top: 42px;
+    left: 100%;
+}
+.first-layer .cont-list .cont{
+    margin-left: 10px;
+}
+.first-layer .top:hover .contr a span{
+    opacity: 0.7;
+}
+.first-layer .contr a span{
+    top:160px;
+    opacity: 0;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 3px;
+    transition: all .4s;
+}
+.first-layer .test_sell_tip{
+    background-color: #83D279;
+    color: #fff;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 25px 0px;
+    line-height: 2px;
+    margin-top: 20px;
+}
+.first-layer a span.best_contr{
+    color: #fff;
+    border: 1px solid #fff;
+    top: -34px;
+    margin-left: 30px;
+    margin-right: 35px;
+    padding: 3px;
+    opacity: 0;
+    transition: all .4s;
+}
+.first-layer .carousel-control{
+    background: transparent;
+}
+.first-layer .best_sell:hover a span.best_contr{
+    opacity: 0.7;
+}
+.goods_mask{
+    width: 100%;
+    height: 50%;
+    background-color:rgba(255,255,255,0.5);
+    bottom: 0;
+    position: absolute;
+    display: none;
+    transition: all 0.5s;
+}
+.goods_mask .top_list{
+    position: absolute;
+    top: 40px;
+    left: 6%;
+}
+.goods_mask .top_list .cont{
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 5px;
+    color: red;
+    margin-right: 5px;
+}
+.goods_mask .add_cart_btn {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    border: 2px solid red;
+    padding: 5px 25px;
+    border-radius: 15px;
+    color:red;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.goods_mask .add_cart_btn:hover{
+    background-color:red;
+    color: #fff;
+}
+.first-layer .best_sell ul.active>li:hover .goods_mask{
+    display: block;
+}
+.first-layer .best_sell .rb{
+    text-align: left;
+}
+.first-layer .best_sell .rb .price{
+    color: #F8694D;
+}
+.first-layer .bottom-adver{
+    margin-top: 40px;
+}
+
+.box .top{
+
+    min-height: 80px;
+    padding-top: 20px;
+
+}
+.left .new{
+    margin-top: 20px;
+}
+.left .new h6:hover{
+    color: #F8694D;
+}
+.left .b{
+    min-height: 145px;
+}
+.left .new .price,.right .fr_1 .price,.right .fr_2 .price{
+    color: #F8694D;
+}
+.left .new p span{
+    cursor: pointer;
+    font-size: 10px;
+}
+.left .top{
+    background-color:#F8694D;
+    color: #fff;
+}
+.right .top ul.nav-tabs>li a{
+    color: #999;
+}
+.right .top ul.nav-tabs>li.active a{
+    color:#F8694D;
+}
+.right_bottom .adver{
+    min-height: 578px;
+}
+.right .fr_1 p span:nth-of-type(3){
+    color: yellow;
+
+}
+.right .fr_1 p span:nth-of-type(1){
+    color: yellow;
+}
+.right .fr_1 p span:nth-of-type(2){
+    color: yellow;
+}
+.right .fr_2 p span{
+    color: yellow;
+}
+.b{
+    border-bottom: 1px solid #e5e5e5;
+}
+.rt{
+    border-top: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+
+.ne{
+    border: 1px solid #fff;
+    font-size: small;
+    margin: 3px;
+    padding: 3px;
+    padding-right: 17px;
+}
+.left  .top .carousel-control{
+    padding: 11px;
+    background: transparent;
+}
+.ne:hover{
+    border: 1px solid #000;
+    color: #000;
+}
+.ne span{
+    font-weight: 100;
+    top: -4px;
+    left: -4px;
+}
+.mark_r{
+    float: right;
+
+}
+.mark_r span{
+    position: relative;
+    color: #00AA88;
+    font-size: 50px;
+}
+.mark_r span .li{
+    position: absolute;
+    top: 17px;
+    left: 10px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.rh{
+    min-height:250px;
+}
+
+.container .box{
+    margin-bottom: 40px;
+}
+ul.scroll_contr{
+    position: fixed;
+    top:10%;
+    left:0px;
+    display: none;
+}
+ul.scroll_contr li{
+    width: 80px;
+    background-color: #0A246A;
+}
+ul.scroll_contr li a:hover{
+    background-color: red;
+}
+ul.scroll_contr li.active a{
+    background-color: red;
+}
+/*   .rb{
+       height: 30%;
+   }
+   .rc{
+       height: 70%;
+   }*/

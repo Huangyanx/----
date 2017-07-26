@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 600px;
+            height:572px;
+            background: url("images/clock.jpg") no-repeat center;
+            margin: 20px auto;
+            position: relative;
+        }
+        .box #h{
+            background: url("images/hour.png") no-repeat center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .box #m{
+            width: 100%;
+            background: url("images/minute.png") no-repeat center;
+            position: absolute;
+            height: 100%;
+        }
+        .box #s{
+            width: 100%;
+            height: 100%;
+            background: url("images/second.png") no-repeat center;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div id="h"></div>
+    <div id="m"></div>
+    <div id="s"></div>
+    
+</div>
+<script>
+  var h=document.getElementById('h');
+  var m=document.getElementById('m');
+  var s=document.getElementById('s');
+    var timer=null;
+    timer=setInterval(function () {
+        var mydate=new Date();
+        var curs=mydate.getSeconds();
+        var curM=mydate.getMinutes()+curs/60;
+        var curh=mydate.getHours()+curM/(60);
+		curs=curs/2;  //秒针一次走半格
+
+        s.style.transform="rotate("+ curs * 6+"deg)";
+        m.style.transform="rotate("+ curM * 6+"deg)";
+        h.style.transform="rotate("+ curh * 30+"deg)";
+    },500);
+</script>
+</body>
+</html>

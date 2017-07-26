@@ -1,0 +1,10 @@
+
+  1.下载store.js     http://amazeui.org/javascript/store?_ver=2.x#secondPass
+ 
+  2.把数据放到数组里
+  
+  3.把数据 循环出来
+
+  4.删除功能
+
+  6.详细功能

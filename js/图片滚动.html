@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            position: relative;
+            margin: 50px;
+            width: 1200px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .box ul{
+            list-style: none;
+            position: absolute;
+        }
+        .box ul li{
+            float: left;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box" id="box">
+    <ul>
+        <li><img src="images/01.jpg"></li>
+        <li><img src="images/02.jpg"></li>
+        <li><img src="images/03.jpg"></li>
+        <li><img src="images/04.jpg"></li>
+    </ul>
+</div>
+&nbsp;&nbsp;<a href="javascript:sport('+',0);" id="right">向右</a>
+<a href="javascript:sport('-',0);" id="left">向左</a>
+<a href="javascript:sport(0,'+');" id="add">加速</a>
+<a href="javascript:sport(0,'-');" id="shade">减速</a>
+<a href="javascript:clearInterval(timer);" id="stop">暂停</a>
+
+<script>
+    var oBox=document.getElementById('box');
+    var oUl=oBox.children[0];
+    var oLiW=oBox.children[0].offsetWidth;
+    var timer=null;
+    oUl.innerHTML += oUl.innerHTML;//复制四个li(ul)
+    oUl.style.width=oLiW*oUl.children.length+'px';
+    var speed=10,isleft=0;
+    sport('+',0);
+    function sport(mark,add) {
+         if (mark=='-')  {
+             speed=-10;//向左运动
+             isleft=1;
+         }if (mark=='+')  {
+            speed=10;
+            isleft=0;
+        }
+        if (add=='+'&&isleft==0){
+            speed++;//右边加速
+        }
+        if (add=='-'&&isleft==0){
+            speed--;//右边减速
+        }
+        if (add=='+'&&isleft==1){
+            speed--;//左边加速
+        }
+        if (add=='-'&&isleft==1){
+            speed++;//左边减速
+        }
+        if(speed>50) {speed=10;}
+        if(speed<-50) {speed=-10;}
+        if(speed>-10&&isleft==1){speed=-50}
+        if(speed<10&&isleft==0){speed=50}
+        console.log(speed>-10&&isleft==0);
+
+        console.log(speed);
+        clearInterval(timer);
+        timer=setInterval(function () {
+            if (oUl.offsetLeft>0) oUl.style.left="-1200px";
+            if (oUl.offsetLeft<-1200) oUl.style.left='0px';
+            oUl.style.left=oUl.offsetLeft+(speed)+'px';
+        },500);
+    }
+
+</script>
+</body>
+</html>

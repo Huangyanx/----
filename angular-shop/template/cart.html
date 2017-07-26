@@ -1,0 +1,27 @@
+
+
+
+ 
+<div class="container" ng-if="cartList.length!=0"> 
+	<h2>购物车列表</h2>
+	<ul class="goodsListBox clear" >
+		<li  ng-repeat="goodsItem in cartList" class="clear">
+			<div class="img_box">
+				<img src="{{ goodsItem.goodsImg }}" alt=""></div>
+			<div class="desc_box">
+				<p  class="goodsName">产品：{{ goodsItem.goodsName }}</p>
+				<p class="goodsPrice">价格：{{ goodsItem.goodsPrice | currency:"￥" }}</p>
+				<p class="goodsCount">数量：<input class="goodsPrice" value="{{ goodsItem.quantity }}" /></p>
+				<p>
+					<a class="addCart" ng-click="UpdateCart(goodsItem)">
+						编辑
+					</a>
+				</p>
+			</div>
+		</li>
+	</ul>
+	<div class="getCartPrice">共计：{{getCartPrice()}}元</div>
+</div>
+<div class="cartnull" ng-if="cartList.length==0">
+	<h2>购物车为空</h2> 
+</div>

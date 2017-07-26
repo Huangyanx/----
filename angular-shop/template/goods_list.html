@@ -1,0 +1,80 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- 第一步：引入两个文件，css/js -->
+	<link rel="stylesheet" href="lib/bootstrap3.3.4.min.css">
+	<script src="lib/angular.min.js"></script>
+	<script src="lib/angular-route.min.js"></script>
+
+	<title></title>
+</head>
+<body ng-app="myFirstBootstrapApp" ng-controller="myFirstBootController">
+	<div class="container">
+		<h2>商品列表</h2>
+		<ul class="goodsListBox">
+			<li  ng-repeat="goodsItem in goodsList">
+				<div class="img_box">
+					<img src="{{ goodsItem.goodsImg }}" alt=""></div>
+				<div class="desc_box"> 
+					<p  class="goodsName">
+						<a href="#goods_detailed/{{ $index }}">{{ goodsItem.goodsName }}</a>
+					</p>
+					<p class="goodsPrice">{{ goodsItem.goodsPrice | currency:"￥" }}</p>
+					<p>
+						<a class="addCart" ng-click="addCart(goodsItem)">
+							加入购物车
+						</a>
+					</p>
+				</div>
+			</li>
+		</ul>
+		<div class="row" style="clear:both">
+			<a  style="width:80%;margin:10px auto" class="btn btn-info btn-lg btn-block"  ng-click="open()">	结算
+			</a>
+		</div>
+	</div>
+
+	<!-- 路由至关重要的 -->
+	<div ng-view=""></div>
+
+	<script type="text/javascript">
+	
+	// 服务：service
+
+	// 第三步：ui.bootstrap 注入到module方法第二个参数
+	angular.module('myFirstBootstrapApp', ['ngRoute'])
+
+
+	.factory('productService',  function($http){
+		// 获取商品列表的事情
+		$http.get('data/goods.json').success(function  (rtnData) {
+			// $scope.goodsList=rtnData;
+		})
+
+		return  Array('1','2','3');
+	})
+
+	.controller("myFirstBootController",function  ($scope,$http,productService) {
+		// 控制器：负责接收参数，去哪一个页面
+		
+	})
+	.controller('goods_detailedContro',  function($scope){
+		$http.get('data/goods.json').success(function  (rtnData) {
+			$scope.goodsList=rtnData;
+		})
+
+	})
+	.config(["$routeProvider",function($routeProvider) {
+		// 第一个点：动态的变量url，需:num
+		$routeProvider.when('/goods_detailed/:id', {
+			templateUrl:"goods_detailed.html",
+			controller:"goods_detailedContro"
+		})
+	}])
+
+
+
+
+</script>
+</body>
+</html>

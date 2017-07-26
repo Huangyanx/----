@@ -1,0 +1,49 @@
+ 
+
+<form name="loginForm" onsubmit="return false;"  class="login_form" id="login_form" >
+	<h2 class="user_title">欢迎登陆</h2>
+ 	<div class="formRow">
+ 		<label>
+ 			<i class="user_bar01 user_bar">
+ 			</i> 
+ 		</label>
+ 		<input   type="text" name="user_name" ng-model="user.user_name" placeholder="请输入用户名"  ng-minlength="4" ng-maxlength="20"  
+ 		ng-pattern="/^[A-Za-z0-9_-]{4,20}$/" required/>
+ 	</div>
+ 	<div class="err_tips">
+	 	<div class="login_err" ng-show="loginForm.user_name.$dirty">
+	 		<span class="err" ng-show="loginForm.user_name.$error.required" >
+	 			不能为空
+	 		</span>
+	 		<span class="err" ng-show="loginForm.user_name.$error.maxlength||loginForm.user_name.$error.minlength">
+	 			介于4-20个字符 
+	 		</span> 
+	 	</div> 
+ 	</div>
+ 	<div class="formRow">
+ 		<label>
+ 			<i class="user_bar02 user_bar">
+ 			</i> 
+ 		</label>
+ 		<input type="password" name="user_pwd" ng-model="user.user_pwd"  placeholder="请使用两种及以上的组合" ng-minlength="6" ng-maxlength="20"  ng-pattern="/^((?=.*?\d)(?=.*?[A-Za-z])|(?=.*?\d)(?=.*?[_-])|(?=.*?[A-Za-z])(?=.*?[_-]))[\dA-Za-z_-]+$/" required/>
+
+ 	</div>
+ 	<div class="err_tips">
+	 	<div class="login_err" ng-show="loginForm.user_pwd.$dirty">
+	 	    <span class="err" ng-show="loginForm.user_pwd.$error.required">
+	 			不能为空
+	 		</span> 
+	 		<span class="err" ng-show="loginForm.user_pwd.$error.minlength ||loginForm.user_pwd.$error.minlength">
+	 			介于6-20个字符 
+	 		</span> 
+	 		<span class="err" ng-show="loginForm.user_pwd.$error.pattern">
+	 			请使用字母、数字和符号两种及以上的组合
+	 		</span> 
+	 	</div> 
+ 	</div>
+ 	 <div class="formRow clear">
+ 	 	<button type="submit" class="btn-login" ng-click="doLogin()" ng-disabled="loginForm.user_name.$invalid||loginForm.user_pwd.$invalid">
+ 	 		登陆
+ 	 	</button>
+ 	 </div>
+</form> 

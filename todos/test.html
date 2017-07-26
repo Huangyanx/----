@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/jquery-datetimepicker/jquery.datetimepicker.css" >
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
+</head>
+<body>
+<input id="datetimepicker" type="text" >
+<video id="music">
+    <source src="music/胡夏-那些年.mp3">
+</video>
+<input id="on_play" value="播放" type="button">
+<script>
+
+    var on_play=document.getElementById('')
+    $('#on_play').on('click',function () {
+            console.log('0000');
+            if ($(this).val()=='播放'){
+                $('#music').play();
+                $(this).val()=='暂停'
+            }else {
+                $('#music').pause();
+                $(this).val()=='播放'
+            }
+
+    })
+    $.datetimepicker.setLocale('ch');
+    $('#datetimepicker').datetimepicker({
+        i18n:{
+            de:{
+                months:[
+                    '1月','2月','3月','4月',
+                    '5月','6月','7月','8月',
+                    '9月','10月','11月','12月',
+                ],
+                dayOfWeek:[
+                    "So.", "Mo", "Di", "Mi",
+                    "Do", "Fr", "Sa.",
+                ]
+            }
+        },
+    });
+</script>
+
+</body>
+</html>

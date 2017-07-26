@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.lianxi_main{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px 0 190px;
+    text-align: center;
+    background-color: black;
+    min-height: 600px;
+}
+.lianxi_main .title{
+    color: #ffcc00;
+    font-size: 40px;
+    text-align: left;
+    margin-left: 50px;
+}
+.lianxi_main .title2{
+    font-size: 22px;
+}
+.lianxi_main .title .eng{
+    color: #7e6717;
+    font-size: 28px;
+    font-weight: 100;
+}
+.lianxi_main h1 .eng .fenge{
+    font-size: 40px;
+}
+.lianxi_main .img_box{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+.lianxi_main .img_box li{
+   float: left;
+    margin-right: 40px;
+}
+.lianxi_main .lianxi{
+    clear: both;
+    color: #d4d4d4;
+    text-align: left;
+    padding-top: 20px;
+}
+.lianxi_main .lianxi span.company{
+    font-size: 20px;
+   /* text-decoration:white underline solid;*/
+    border-bottom: 1px solid #8a8a8a;
+    padding-bottom: 5px;
+
+}
+
+.lianxi_main .lianxi ul>li{
+    font-size: 16px;
+    float: left;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.lianxi_main .lianxi ul>li>ul>li{
+    margin-right: 20px;
+    clear: both;
+}

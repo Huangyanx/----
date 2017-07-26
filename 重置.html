@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+
+
+<!-- 单击修改表格里面的内容 -->
+<table id="table_box">
+	<tr><th>编号</th><th>用户名</th><th>年龄</th></tr>
+</table> 
+<script type="text/javascript">
+	var info=[[0001,'张三',34],[0002,'李四',24],[0003,'王五',23],[0004,'赵四',45],[0005,'刘晓',30]];
+	//console.log(info);
+	var cur_td;
+	var table=document.getElementById('table_box');
+	for(var i=0;i<info.length;i++){
+		var row=table.insertRow();
+		for(var j=0; j<info[i].length;j++){
+			var col=row.insertCell();
+			var value=info[i][j];
+			var val=col.innerHTML=info[i][j];
+			if(j==1|j==2){	
+				col.onclick=function(){
+					if(typeof cur_td != 'undefined'&& cur_td!=this&&cur_td!=null){//判断是否编辑当前的td
+						cur_td.innerHTML=cur_td.children[0].value;//保存input里面的值，赋给文本	
+					}
+					//解决一点击就会重新创建input，需要先判断input存不存在
+					if( typeof this.children[0]=='undefined'){
+						//console.log(this.info[i][j]);
+							cur_td=this;
+							var add_input=document.createElement("input");
+							add_input.value=this.innerHTML;
+							this.innerHTML='';
+							var inp=this.appendChild(add_input);
+							moveEnd(add_input);//对焦输入框
+							add_input.onblur=function(){
+									cur_td.innerHTML=cur_td.children[0].value;
+									cur_td=null;
+							}
+						}
+						
+					}
+					
+					col.onkeydown=function(even){//按下回车键保存修改的值
+							if(even.keyCode=='13'){
+								if(typeof cur_td != 'undefined'&& cur_td!=this){
+									cur_td.innerHTML=cur_td.children[0].value;	
+									
+								}
+								var input_val=this.children[0].value;
+								this.innerHTML=input_val;
+								cur_td=null;
+							}
+							
+						}
+				}
+				
+				
+			}
+		
+	}
+	
+	// 把输入框、文本框的焦点定位到文本的最后位置
+function moveEnd(obj) {
+	obj.focus();
+
+
+	var len = obj.value.length;
+	if (document.selection) {
+		var sel = obj.createTextRange();
+		sel.moveStart('character', len);
+		sel.collapse();
+		sel.select();
+	} else if (typeof obj.selectionStart == 'number'
+			&& typeof obj.selectionEnd == 'number') {
+		obj.selectionStart = obj.selectionEnd = len;
+	}
+}
+
+</script>
+
+</body>
+</html>

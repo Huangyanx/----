@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jd幻灯片</title>
+<style>
+body{ margin:0px;}
+ul,li{list-style: none;margin:0px;
+	padding:0px;}
+.slide_box{
+	position:relative;		
+}
+.slide_ul_box{//幻灯片盒子
+	position:absolute;
+	float:left;
+	z-index:1;	
+}
+.slide_ul_box li{
+	display:none;	
+	
+}
+.slide_ul_box li:first-child{
+	display:block;
+}
+.slide_ul_box li img{width: 100%}
+.bai_box{//白点盒子
+	z-index: 9;
+    height: 10px;
+    left: 30%;
+    bottom:9px;
+    position: absolute;
+}
+.bai_box li{
+	width: 6px;
+    height: 6px;
+    border-radius: 5px;
+    float: left;
+	border:2px #FFFFFF solid;
+    margin-right: 7px;
+	
+}
+.bai_box .back_color{
+	background-color:#FFF;
+	
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<div class="slide_box" id="slide_box">
+	<ul class="slide_ul_box" id='slide_ul_box'>	
+    	<li><img src="images/huan1.jpg"></li>
+        <li><img src="images/huan2.jpg"></li>
+        <li><img src="images/huan3.jpg"></li>
+        <li><img src="images/huan4.jpg"></li>
+        <li><img src="images/huan5.jpg"></li>
+    
+    
+    </ul>
+    <ul class="bai_box" id='bai_box'>	
+    	<li class="back_color"></li>
+        <li ></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+	
+
+
+</div>
+<script type="text/javascript" src="slide.js"></script>
+</body>
+</html>

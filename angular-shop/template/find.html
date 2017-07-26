@@ -1,0 +1,23 @@
+
+
+<div class="container" >
+<h2>商品列表</h2>
+	<div class="goodsListBox clear" ng-repeat="goodsItem in goodsList">
+		<div class="img_box">
+			<img src="{{goodsItem.goodsImg}}" />
+		</div>
+		<div class="desc_box">
+			<div class="goodsName" >
+				<a href="#goods_detailed/{{$index}}">
+					{{goodsItem.goodsName}}
+				</a>
+			</div>
+			<div class="goodsPrice" >
+				{{goodsItem.goodsPrice| currency:"￥"}}
+			</div>
+			<a href="javascript:;" class="addCart" ng-click="addCart(goodsItem)">
+				加入购物车
+			</a>
+		</div>
+	</div>
+</div>

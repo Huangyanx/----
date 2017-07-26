@@ -1,0 +1,107 @@
+
+.clear:before,.clear:after{
+    content: ' ';
+    display: block;
+    clear: both;
+}
+a{color: #333 !important}
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+.floor a{    color: #333;
+    font-size: 14px;
+    line-height: 50px;}
+
+.floor a.cur_menu{color: #f58384;font-weight: bold;}    
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+	.FormRow{border: 1px solid #ccc;padding: 20px;margin-top: 20px;}
+    .formRow{
+        padding: 5px;
+    }
+   
+	.FormRow input{border: none;width: 80%;}
+	.btn-login {
+        display:block;width: 100%;  height: 54px; color: #fff; 
+        background-color: #ff3300; border: 0; font-size: 16px; 
+        font-family: "Microsoft YaHei","Hiragino Sans GB"; } 
+	.input-tip {color: #c5c5c5; height: 27px; font-size: 12px; padding-top: 5px; }
+	.input-tip .error {color: #e22; }
+    .container{padding: 10px;}
+    .container h2{border-bottom: 1px solid #ccc;}
+    .container .goodsListBox li{margin-bottom: 10px; clear: both;}
+    .container .goodsListBox .img_box{ width: 40%; float: left;}
+    .container .goodsListBox  .img_box img{    width: 100%; clear: both;}
+
+    .container .goodsListBox .desc_box{ 
+        width: 55%;
+        float: left;
+        margin-left: 10px;
+        padding: 10px; 
+}
+     
+   .goodsListBox  .desc_box .goodsName{ font-size: 18px; margin-bottom: 10px;}
+   .goodsListBox  .desc_box .goodsPrice{ color: #f58384; clear: none; width: 200px;}
+   .goodsListBox  .desc_box .goodsCount{line-height: 22px;}
+   .goodsListBox  .desc_box .goodsCount input{ width: 60%;}
+   .addCart{cursor: pointer;display: block; background-color: #f58384; color: #fff !important; padding: 10px; text-align: center; margin-top: 5px;}
+   .goods_detailed{
+        padding: 10px;
+   }
+.backList{
+    cursor: pointer;
+    display: block; 
+    padding: 10px; 
+    border-radius: 5px;
+    background-color: #b3b3ff;
+    color: #fff !important; 
+    text-align: center; 
+    margin-top: 5px;
+}
+.cartnull{
+    text-align: center;
+}
+.getCartPrice{clear: both;margin-bottom: 100px;font-size: 16px;text-align: right;color: red;}
+ .login_form{
+    padding: 10px; 
+    background-color:#f2f2f2; 
+ }
+ .login_form h2{
+    margin-bottom: 10px;
+ }
+
+.login_form i.user_bar{
+    display: block;
+    float: left;
+    width: 25px;
+    height: 21px;
+    margin-right: 10px;
+}
+.login_form i.user_bar01{
+    background: url(../m_jd_files/user_bar.png) no-repeat 3px -21px;
+    margin-top: 10px;
+} 
+.login_form i.user_bar02{ 
+    background: url(../m_jd_files/user_bar.png) no-repeat 3px -41px;
+    margin-top: 8px;
+}
+.login_form .formRow{ min-height:47px;clear: both;background-color: #fff; }
+.login_form .formRow label{
+    float: left;
+    height: 40px;
+    background-color:#fff; 
+}
+.login_form .formRow input{width: 85% ; float:left;height: 40px; padding-left: 5px;line-height: 40px; }
+.login_form .login_err{clear: both; height: 30px!important; }
+.login_form .login_err .err{color: red;display: block;line-height: 18px;} 
+.login_form .err_tips{ font-size:14px;height: 40px;line-height: 20px; }
+.changeRed{
+    color: red!important;
+}
+ 

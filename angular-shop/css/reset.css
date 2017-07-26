@@ -1,0 +1,10 @@
+div,p,table,tr,td,ul,ol,li,dl,dd,dt{
+	margin: 0;
+	padding: 0;
+}
+input,img{
+	border: none;
+}
+ul li{
+	list-style-type: none;
+}

@@ -1,0 +1,56 @@
+<meta charset=utf-8 />
+<h2 class="user_title">注册</h2>
+<form name="regForm" onsubmit="return false;" >
+	<div class="formRow">
+ 		<label>
+ 			用户名：
+ 		</label>
+ 		<input  type="text" name="user_name" ng-model="user.user_name" placeholder="请输入用户名"  ng-minlength="4" ng-maxlength="20"  
+ 		ng-pattern="/^[A-Za-z0-9_-]|[\u4e00-\u9fa5]{4,20}$/" required/>
+	</div>
+	<div class="reg_err" ng-show="regForm.user_name.$dirty">
+ 		<span class="err" ng-show="regForm.user_name.$error.required">
+ 			不能为空
+ 		</span>
+ 		<span class="err" ng-show="regForm.user_name.$error.maxlength ||regForm.user_name.$error.minlength">
+ 			必须介于4-20个字符 
+ 		</span>
+ 		<span class="err" ng-show="regForm.user_name.$error.pattern">
+ 			支持中文、字母、数字、“-”、“_”的组合
+ 		</span>
+	</div> 
+	<div class="formRow">
+ 		<label>
+ 			密码：
+ 		</label>
+ 		<input type="text" name="user_pwd" ng-model="user.user_pwd"  placeholder="请输入密码" ng-minlength="6" ng-maxlength="20"  ng-pattern="/^((?=.*?\d)(?=.*?[A-Za-z])|(?=.*?\d)(?=.*?[_-])|(?=.*?[A-Za-z])(?=.*?[_-]))[\dA-Za-z_-]{6,20}$/" required />
+
+	</div>
+	<div class="reg_err" ng-show="regForm.user_pwd.$dirty">
+ 	    <span class="err" ng-show="regForm.user_pwd.$error.required">
+ 			不能为空
+ 		</span> 
+ 		<span class="err" ng-show="regForm.user_name.$error.maxlength ||regForm.user_name.$error.minlength">
+ 			必须介于4-20个字符 
+ 		</span>
+ 		<span class="err" ng-show="regForm.user_pwd.$error.pattern">
+ 			请使用字母、数字和符号两种及以上的组合,6-20个字符 
+ 		</span> 
+	</div>
+	<div class="formRow">
+ 		<label>
+ 			再次输入密码：
+ 		</label>
+ 		<input type="text" name="user_pwd_again" ng-model="user.user_pwd_again"  placeholder="请再次输入密码"    required />
+ 	</div>
+	<div class="reg_err" ng-show="regForm.user_pwd_again.$dirty">
+ 	    <span class="err" ng-show="user.user_pwd!=user.user_pwd_again">
+ 			 两次密码不一致
+ 		</span> 
+ 	</div>
+ 	<div class="formRow">
+ 	 	<button type="submit" ng-click="doReg()" ng-disabled="regForm.user_name.$invalid||regForm.user_pwd.$invalid||regForm.user_pwd_again.$invalid" class="btn-register" >
+ 	 		注册
+ 	 	</button>
+ 	</div>
+</form>

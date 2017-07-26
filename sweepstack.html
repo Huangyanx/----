@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript实现抽奖</title>
+
+<style>
+.show{
+	color:#F00;
+	//text-align:center;
+	width:200px;
+	padding-left:40px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- 
+抽奖：按回车键开始抽奖，
+按下空格,3秒后揭示抽中那个奖
+ -->
+ 
+ 
+ 
+ <h1>抽奖活动：有笔记本、手机、MP3等奖品抽</h1>
+ <h5>注：按下回车键即可进行抽奖，按下空格键即可揭晓奖项。</h5>
+ <div class='show' id="show"></div>
+ 
+ <script type="text/javascript">
+ 	var prize=['华硕笔记本','华为手机','MP3','记事本','谢谢惠顾！'];
+	var show=document.getElementById('show');
+	var num=0;
+	function list(){
+		if(num>=prize.length){
+			num=0;	
+		}
+		show.innerHTML=prize[num];
+		
+		num++;
+		}
+		function show_prize(){
+			var rand_num=Math.round(Math.random()*1000);
+			if(rand_num<3&&rand_num>1){
+				rand_num=1;	//为华为手机的，几率为2/1000
+			}else if(rand_num<6&&rand_num>2){
+				rand_num=2;	//为华MP3机的，几率为3/1000
+			}else if(rand_num<16&&rand_num>5){
+				rand_num=3;	//为华为记事本的，几率为10/1000
+			}else if(rand_num>15){
+				rand_num=4;	//为谢谢慰顾的，几率为984/1000
+			}
+			//揭示奖项
+			show.innerHTML=prize[rand_num];
+		}
+		var enter;
+	window.onkeydown=function(event){//按下键盘事件
+		//console.log(event);
+		if(event.keyCode==13){//按下回车键，开始抽奖
+			 enter=true;
+			start_time=setInterval(list,400);
+			setTimeout(show_pri,5000);
+			
+			}
+		if(event.keyCode==32&&enter!=undefined){
+			show_pri();
+			
+		}
+		
+	}
+	function show_pri(){
+		clearInterval(start_time);//清除定时器
+		show.innerHTML='在3秒钟之后公布奖项，请稍等……';
+		setTimeout(show_prize,3000);
+	}
+	 
+ </script>
+</body>
+</html>

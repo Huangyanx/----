@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+	box-sizing: border-box;
+}
+.banner {
+    width: 100%;
+    max-width: 1920px;
+    height: 450px;
+    background-color: #00b4ef;
+    text-align: center;
+    overflow: hidden;
+    margin: auto;
+    min-width: 1200px;
+}
+
+.banner .index_bk {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.banner .index_bk li {
+    width: 100%;
+    height: 450px;
+}
+
+.banner .index_bk li img {
+    width: 100%;
+    height: 450px;
+}
+
+.course {
+    width: 100%;
+    max-width: 1920px;
+    min-width: 1200px;
+    height: 450px;
+    text-align: center;
+    overflow: hidden;
+    margin: auto;
+    color: #FFFFFF;
+    position: relative;
+    top: -450px;
+}
+
+.course a {
+    color: #FFFFFF;
+}
+.no_fource li{
+    background-color: rgba(155,114,23,0.3) !important
+    }
+.course .left {
+    width: 228px;
+    height: 450px;
+    float: left;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.course .left ul li {
+    width: 190px;
+    height: 64px;
+    line-height: 64px;
+    background-color: #9b8134;
+    border-top: 1px solid #999;
+    margin-left: 38px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+}
+
+.course .right {
+    /* max-width: 1692px;
+     min-width: 972px;*/
+    width: 900px;
+    height: 450px;
+    float: left;
+    text-align: center;
+
+
+}
+
+.course .right .sing_left {
+    width: 228px;
+    height: 450px;
+    float: left;
+    text-align: center;
+    margin: auto;
+    border-right: 1px solid #999;
+}
+
+.course .right .sing_left img {
+    width: 170px;
+    height: 110px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.course .right .sing_left p {
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+
+}
+.course .right li{z-index: 9999; position: relative; height: auto; overflow: hidden;}
+.course .img-responsive,.cont_img{width: auto !important;}
+.course .right .sing_right {
+    width: 500px;
+    height: 450px;
+    float: left;
+    margin: auto;
+    padding-top: 100px;
+
+}
+
+.course .right .sing_right .topic {
+    margin-left: 20px;
+    width: 80px;
+    float: left;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.course .right .sing_right p {
+    line-height: 28px;
+    font-size: 15px;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.course .right .sing_right img{
+    position: relative;
+    float: right;
+    right: 10px;
+    bottom: 10px;
+    width: 220px;
+}
+
+.course .right .double {
+    width: 900px;
+    height: 225px;
+    border-collapse: collapse;
+  
+   border-bottom: 1px solid #999;
+}
+
+.course .right .double .left {
+    width: 250px;
+    height: 225px;
+    float: left;
+    text-align: center;
+    margin: auto;
+    border-right: 1px solid #999;
+}
+.course .right .double .left img {
+    width: 150px;
+    margin: auto;
+    margin-top: 20px;
+}
+.course .right .top .left p {
+    height: 28px;
+    line-height: 28px;
+    color: #fff;
+
+}
+.course .right .double .right {
+    width: 640px;
+    height: 225px;
+    float: left;
+    margin: auto;
+    padding-top: 20px;
+
+}
+.course .right .double .right .topic {
+    margin-left: 20px;
+    width: 80px;
+    float: left;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.course .right .double .right p {
+    line-height: 28px;
+    font-size: 15px;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.course .right .double .right img{
+    position: relative;
+    float: right;
+    right: 10px;
+    bottom: 80px;
+}
+.course .right .double .right img.bott_img{
+    position: relative;
+    float: right;
+    right: 10px;
+    bottom: 60px;
+    width: 220px;
+}
+
+
+.course .right .five{
+    width: 900px;
+    height: 90px;
+    border-collapse: collapse;
+   
+   border-bottom: 1px solid #999;
+}
+.course .right .five .left {
+    width: 228px;
+    height: 90px;
+    padding-top:20px;
+    float: left;
+    text-align: center;
+    margin: auto;
+    border-right: 1px solid #999;
+}
+.course .right .five .left p {
+    height: 28px;
+    line-height: 28px;
+    color: #fff;
+
+}
+.course .right .five .right {
+    
+    width: 670px;
+    height: 90px;
+    float: left;
+    margin: auto;
+    text-align:center;
+    padding-right:50px;
+
+}
+.course .right .first .right{
+    padding-top:0px;
+}
+.course .right .five .right .text{
+    padding-top:20px;
+    float:left;
+    width: 533px;
+    height: 90px;
+}
+.course .right .five .right .five_first{
+    padding-top:5px;
+}
+.course .right .five .right .text .five_bottom{
+    clear:both;
+    width: 533px;
+}
+.course .right .five .right .bot_img img{
+    float:left;
+}
+.course .right .five .right .topic {
+    margin-left: 20px;
+    width: 80px;
+    float: left;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.course .right .five .right p {
+    line-height: 26px;
+    font-size: 15px;
+    text-align: left;
+}
+
+
+
+.course .right .nine{
+    width: 900px;
+    height: 50px;
+    border-collapse: collapse;
+  
+   border-bottom: 1px solid #999;
+}
+.course .right .nine .left {
+    width: 228px;
+    height: 50px;
+    
+    float: left;
+    text-align: center;
+    margin: auto;
+    border-right: 1px solid #999;
+}
+.course .right .nine .left h4{
+    padding-top:10px;
+}
+.course .right .nine.left p {
+    height: 28px;
+    line-height: 28px;
+    color: #fff;
+
+}
+.course .right .nine .right {
+    padding-top: 11px;
+    width: 670px;
+    height: 50px;
+    float: left;
+    margin: auto;
+    text-align:center;
+    padding-right:20px;
+
+}
+
+.course .right .nine .right .topic {
+    margin-left: 20px;
+    width:90px;
+    float: left;
+    font-size: 16px;
+    line-height: 26px;
+}
+.course .right .nine .right p {
+    line-height: 26px;
+    font-size: 15px;
+    text-align: left;
+    margin-left: 100px;
+}
+

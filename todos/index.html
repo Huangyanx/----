@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>todu</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/jquery-datetimepicker/jquery.datetimepicker.css" >
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/store.js/store.js"></script>
+    <script src="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
+
+</head>
+<body>
+
+<div class="msg">
+    <span class="msg-content"></span>
+    <span class="anchor confirmed">知道了</span>
+</div>
+<video id="music">
+    <source src="music/胡夏-那些年.mp3">
+</video>
+<div class="contanier">
+    <h1>我的Todo</h1>
+    <form class="add-task">
+        <input type="text" placeholder="e.g. 输入你要代办的事情">
+        <button type="submit">提交</button>
+    </form>
+    <ul class="task-list">
+        <!--<li class="task-item">
+            <input type="checkbox" class="complete">
+            <span class="task-content">今晚20:00学习</span>
+            <div class="fr">
+                <span class="action delete">删除</span>
+                <span class="action detail">详细</span>
+            </div>
+        </li>
+        <li class="task-item">
+            <input type="checkbox" class="complete">
+            <span class="task-content">今晚21:00回去打豆豆</span>
+            <div class="fr">
+                <span class="action delete">删除</span>
+                <span class="action detail">详细</span>
+            </div>
+        </li>
+        <li class="task-item">
+            <input type="checkbox" class="complete">
+            <span class="task-content">晚上23:00睡觉</span>
+            <div class="fr">
+                <span class="action delete">删除</span>
+                <span class="action detail">详细</span>
+            </div>
+        </li>-->
+    </ul>
+    <div class="task-detail-mask"></div>
+    <div class="task-detail">
+        <form class="form up">
+            <h2 class="content">这是标题</h2><input class='edit_title'>
+            <div class="input-item">
+                <textarea></textarea>
+            </div>
+            <div class="remind input-item">
+                <label>提醒时间</label>
+                <input class="datetime datetimepicker" type="text" value="">
+            </div>
+            <div class="input-item"><button>更新</button></div>
+            <div class="close">X</div>
+        </form>
+    </div>
+    <div class="delete_all_box">
+        <button class="all">全选</button> <button class="no_all">全不选</button><button class="delete_all">删除</button>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/tudou.js"></script>
+
+</body>
+</html>

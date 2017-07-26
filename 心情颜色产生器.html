@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+
+		input {
+		  position: absolute;
+		  left: 0;
+		  top: 40%;
+		  transform: translateY(-50%);
+		  width: 100%;
+		  border: none;
+		  background: rgba(255, 255, 255, 0.75);
+		  padding: 24px 22%;
+		  box-sizing: border-box;
+		  font-size: 48px;
+		  font-family: "Helvetica Neue", Helvetica;
+		  font-weight: bold;
+		  outline: 0;
+		}
+
+		body {
+		  transition: background 0.5s;
+		}
+	</style>
+</head>
+<body>
+
+	<input type="text" placeholder="How do you feel?" />
+	<div id="color"></div>
+
+
+
+	<script type="text/javascript">
+		
+		var input = document.getElementsByTagName('input')[0];
+		var body = document.getElementsByTagName('body')[0];
+
+		var convertToHexCode = function(str) {
+		  var chars = str.split('');
+		  var code = 0;
+
+		  chars.forEach(function(char) {
+		    code += +char.charCodeAt(0) * 987654;
+		  });
+
+		  return code.toString(16).substr(0, 6);
+		};
+
+		input.onkeyup = function(e) {
+		  var code = convertToHexCode(e.target.value);
+		  
+		  if (code === '0') {
+		    body.style.backgroundColor = '#ffffff';
+		    return;
+		  }
+		  
+		  body.style.backgroundColor = '#' + code;
+		};
+
+	</script>
+
+</body>
+</html>

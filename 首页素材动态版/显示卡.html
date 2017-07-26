@@ -1,0 +1,49 @@
+﻿<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<style>
+
+.box{float:left;width:200px;}
+div>div{margin:0;padding:0;width:184px;height:200px;border:1px solid #ccc;display:none;}
+.tab{float:left;margin:0;padding:0;list-style:none;width:50px;overflow:hidden;}
+.tab li{width:60px;height:30px;background:#ccc;color:#fff;border:1px solid red; text-align:center;line-height:30px;cursor:pointer; }
+.on{display:block;}
+.tab li.cur{background:blue;}
+</style>
+
+</head>
+
+<body>
+
+<ul class="tab">
+       <li>最新</li>
+       <li class="cur">热门</li>
+       <li>新闻</li>
+ </ul>
+ <div class="box">
+	  <div>11fuifhiufhif<br>是的v的法律九点半表的VBvjdfdivbd 的发布丢DVD放假个地方官房间打开</div>
+	 <div class="on">22hif<br>是的v的法律九点半表的VBvjdfdivbd 的发布丢DVD放假个地方官房间打开</div>
+	 <div>33hif<br>是的v的法律九点半表的VBvjdfdivbd 的发布丢DVD放假个地方官房间打开</div>
+ </div>
+
+
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" >
+
+$(document).ready(function(){
+        $(".tab li").click(function(){
+        $(".tab li").eq($(this).index()).addClass("cur").siblings().removeClass('cur');
+$("div>div").hide().eq($(this).index()).show();
+       //另一种方法: $("div").eq($(".tab li").index(this)).addClass("on").siblings().removeClass('on'); 
+
+        });
+    });
+</script>
+
+</html>

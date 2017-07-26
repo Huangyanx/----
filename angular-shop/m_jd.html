@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>专业网上购物平台品质保障！ - 
+				京东商城</title> 
+	<meta name="author" content="m.jd.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="author" content="m.jd.com">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta name="description" content="京东JD.COM-专业的综合网上购物商城,在线销售家电、数码、电脑、服装、母婴、图书、食品等数万个品牌商品.便捷、诚信的服务,为您提供愉悦的网上商城购物体验! ">
+	<meta name="Keywords" content="网上购物,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东商城">
+	<script type="text/javascript">
+            var rTimeArr = [];
+            rTimeArr[0] = {time : new Date(), sTime : "0"};
+            document.addEventListener("DOMContentLoaded",function(){
+                rTimeArr[1] = {time : new Date() , sTime : "0"};
+            });
+			rTimeArr[2] = {sTime : "0"};
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="m_jd_files/layout2015.css" charset="gbk">
+	<link rel="stylesheet" type="text/css" href="m_jd_files/home_2017_3_2.css" charset="gbk">
+	<link rel="stylesheet" type="text/css" href="css/common.css" >
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap3.3.4.min.css" />
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="angular-route.min.js"></script> 
+	<script type="text/javascript" src="ui-bootstrap-tpls1.1.2.js"></script> 
+	<script>rTimeArr[2]["time"] = new Date();</script>
+</head>
+<body ng-app="my_dj"  class="mhome hide-landing" cz-shortcut-listen="true">
+
+	<header class=" topheader " id="topheader" style="display: none;"></header>
+	<div id="scwrapper" class="scroll-wrapper">
+		<script>rTimeArr[3] ={sTime:new Date()};</script>
+		<div class="floor bottom-bar-pannel">
+			<div class="floor-container  bdr-top ">
+				<ul class="tab5">
+					<li>
+						<span class="bar-img">
+							<a class="J_ping" ng-class="{'changeRed':change.index}" ng-click="change=null;change.index=true"   href="#/">首页</a>
+						</span>
+					</li> 
+					<li>
+						<span class="bar-img">
+							<a class="J_ping" ng-class="{'changeRed':change.find}" ng-click="change=null;change.find=true"  href="#find">
+							发现
+							</a>
+						</span>
+					</li>
+					<li>
+						<span class="bar-img">
+							<a class="J_ping" report-eventlevel="1" ng-init="cartCount=0" report-eventid="MHome_BBottomTab" report-eventparam="cart" page_name="index" href="#cart" ng-class="{'changeRed':change.cart}" ng-click="change=null;change.cart=true">
+								购物车({{ cartCount }})
+							</a>
+						</span>
+					</li>
+					<li>
+						<span class="bar-img">
+							<a class="J_ping" ng-class="{'changeRed':change.own}" ng-click="change=null;change.own=true" report-eventlevel="1" report-eventid="MHome_BBottomTab" report-eventparam="home" page_name="index" href="#login">我的</a>
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		 
+		<div ng-view="" ></div>
+
+		<script type="text/javascript" src="js/app.js"></script>
+</body>
+	</html>

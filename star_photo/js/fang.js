@@ -23,6 +23,7 @@ window.onload=function () {
         right.style.right=wid+'vw';
         left_s=is_l;
 	}
+	
     var noti_btn=document.querySelector('.box_btn .noti_btn');
     var get_noti=document.querySelector('.get_noti');
 	var noti_shadow= document.querySelector('.noti_shadow');
